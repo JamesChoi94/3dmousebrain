@@ -1,4 +1,4 @@
-# 3dbrain
+# 3dmousebrain
 
 ## Project setup
 ```
@@ -27,4 +27,3 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-# 3dmousebrain
