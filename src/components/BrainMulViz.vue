@@ -817,7 +817,7 @@ export default {
             opacity: 1,
           },
           title: {
-            text: "Norm cell cout by category for mGreenLantern",
+            text: "Raw cell counts by category for mGreenLantern",
             align: "center",
             offsetY: 10,
             style: {
@@ -865,7 +865,7 @@ export default {
             opacity: 1,
           },
           title: {
-            text: "Normalized cell count by brain region for mGreenLantern",
+            text: "Raw cell counts by brain region for mGreenLantern",
             align: "centre",
             style: {
               fontSize: "14px",
