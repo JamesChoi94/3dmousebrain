@@ -63,7 +63,7 @@ rsync -nrv dist/ ubuntu@ip-172-31-28-81:/var/www/3dmousebrain.com
 
 The real deal:
 ```
-rsync -nrv dist/ ubuntu@ip-172-31-28-81:/var/www/3dmousebrain.com
+rsync -rv dist/ ubuntu@ip-172-31-28-81:/var/www/3dmousebrain.com
 ```
 
 This will copy files in `dist/` directory into `3dmousebrain.com/`. A `dist/` directory should not appear in `3dmousebrain.com/`. 
