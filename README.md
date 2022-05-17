@@ -37,7 +37,7 @@ Run the following to install dependencies according to `package-lock.json`.
 npm install
 ```
 
-### Compiles and hot-reloads for development
+#### Compiles and hot-reloads for development
 
 Run this to spin-up a development server locally for debugging and editing purposes. 
 
@@ -45,7 +45,7 @@ Run this to spin-up a development server locally for debugging and editing purpo
 npm run serve
 ```
 
-### Compiles and minifies for production
+#### Compiles and minifies for production
 
 Run this to compile files for production. Files are compiled into `dist` directory in home.
 
@@ -68,7 +68,7 @@ rsync -rv dist/ blackmoreserver:/var/www/3dmousebrain.com
 
 This will copy files in `dist/` directory into `3dmousebrain.com/`. A `dist/` directory should not appear in `3dmousebrain.com/`. 
 
-### SSH Alias
+#### SSH Alias
 
 ```
 Host blackmoreserver
@@ -80,7 +80,10 @@ Host blackmoreserver
 
 Can also point `IdentityFile` to another location e.g. `/mnt/d/3dmousebrain/keys/brainrender.pem`.
 
-### Run your tests
+
+## MISC 
+
+#### Run your tests
 
 JSC: I have not tried this.
 
@@ -88,7 +91,7 @@ JSC: I have not tried this.
 npm run test
 ```
 
-### Lints and fixes files
+#### Lints and fixes files
 
 JSC: I have not tried this.
 
@@ -96,5 +99,5 @@ JSC: I have not tried this.
 npm run lint
 ```
 
-### Customize configuration
+#### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
