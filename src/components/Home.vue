@@ -1,12 +1,30 @@
 <template>
   <div>
   <b-container>
-    <b-col>
-    <h3>
-        Exploring Nuclei of Descending Input to the Spinal Cord
-    </h3>
+    <b-row class="container">
+      <b-col>
+        <h3>
+            Exploring Nuclei of Descending Input to the Spinal Cord
+        </h3>
+        <br>
+        <b-carousel
+            id="carousel-fade"
+            style="text-shadow: 0px 0px 2px #000"
+            fade
+            indicators
+            controls
+            img-width="800"
+            img-height="380"
+          >
+          <b-carousel-slide v-for="(image, index) in items" :key="index"
+            :caption="image.text"
+            :img-src="image.src"
+            >
+          </b-carousel-slide>
+        </b-carousel>
+      </b-col>
+    </b-row>
     <br>
-    </b-col>
     <b-row>
       <h5>
         This project visualizes and quantifies supra spinal neurons with projections to the cervical, thoracic and lumbar segments.
@@ -14,31 +32,6 @@
       <b-button class="butt" variant="primary" :to="{name: 'selecttype'}">
         <b>Start Exploring</b>
       </b-button>
-      <br>
-      <br>
-    </b-row>
-    <b-row>
-      <br>
-    </b-row>
-    <b-row class="container">
-    <br>
-    <br>
-      <b-col>
-        <b-carousel
-          id="carousel-fade"
-          style="text-shadow: 0px 0px 2px #000"
-          fade
-          indicators
-          controls
-          img-width="800"
-          img-height="380"
-        >
-          <b-carousel-slide v-for="(image, index) in items" :key="index"
-            :caption="image.text"
-            :img-src="image.src"
-          ></b-carousel-slide>
-        </b-carousel>
-      </b-col>
     </b-row>
     <br>
   </b-container>

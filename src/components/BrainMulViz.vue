@@ -474,136 +474,270 @@ export default {
       if (this.category=='injured' || this.category=='cervical') {
         this.showNormalizedButton = true;
       }
-      this.chartOptions2 = {
-        chart: {
-          stacked: this.stackedState,
-        },
-        tooltip: {
-          intersect: true,
-          shared: false,
-          onDatasetHover: {
-            highlightDataSeries: true,
+      if (this.category=='cervical') {
+        this.chartOptions2 = {
+          chart: {
+            stacked: this.stackedState,
           },
-        },
-        plotOptions: {
-          bar: {
-            horizontal: true,
-            distributed: true,
-          },
-        },
-        colors: this.colors,
-        grid: {
-          show: true,
-          borderColor: "#90A4AE",
-          strokeDashArray: 0,
-          position: "back",
-          xaxis: {
-            lines: {
-              show: false,
+          tooltip: {
+            intersect: true,
+            shared: false,
+            onDatasetHover: {
+              highlightDataSeries: true,
             },
           },
-          yaxis: {
-            lines: {
-              show: false,
+          plotOptions: {
+            bar: {
+              horizontal: true,
+              distributed: true,
             },
           },
-          row: {
-            colors: undefined,
-            opacity: 0.5,
+          colors: this.colors,
+          grid: {
+            show: true,
+            borderColor: "#90A4AE",
+            strokeDashArray: 0,
+            position: "back",
+            xaxis: {
+              lines: {
+                show: false,
+              },
+            },
+            yaxis: {
+              lines: {
+                show: false,
+              },
+            },
+            row: {
+              colors: undefined,
+              opacity: 0.5,
+            },
+            column: {
+              colors: undefined,
+              opacity: 0.5,
+            },
+            padding: {
+              top: 0,
+              right: 0,
+              bottom: 0,
+              left: 0,
+            },
           },
-          column: {
-            colors: undefined,
-            opacity: 0.5,
-          },
-          padding: {
-            top: 0,
-            right: 0,
-            bottom: 0,
-            left: 0,
-          },
-        },
 
-        fill: {
-          type: "solid",
-          //type: "pattern",
-          opacity: 1,
-        },
-        title: {
-          text: "Raw cell count by category",
-          align: "center",
-          offsetY: 10,
-          style: {
-            fontSize: "14px",
-            fontWeight: "bold",
-            color: "#263238",
+          fill: {
+            type: "solid",
+            //type: "pattern",
+            opacity: 1,
           },
-        },
-        xaxis: { categories: this.mainregions,
-        tickPlacement: 'on' },
-        yaxis: {
-          tickAmount: 5,
-          max: this.slidervalue,
-          labels: { maxWidth: 270, style: { fontSize: "16px" } },
-        },
-        legend: {
-          show: false,
-          position: "top",
-        },
-        dataLabels: {
-          enabled: false,
-          style: {
-            colors: ["black"],
+          title: {
+            text: "Raw cell count by category for mScarlet",
+            align: "center",
+            offsetY: 10,
+            style: {
+              fontSize: "14px",
+              fontWeight: "bold",
+              color: "#263238",
+            },
           },
-        },
-      };
-      this.chartOptions = {
-        chart: {
-          stacked: false,
-        },
-        colors: this.allcolors,
-        grid: {
-          show: true,
-        },
-        plotOptions: {
-          bar: {
-            horizontal: true,
+          xaxis: { categories: this.mainregions,
+          tickPlacement: 'on' },
+          yaxis: {
+            tickAmount: 5,
+            max: this.slidervalue,
+            labels: { maxWidth: 270, style: { fontSize: "16px" } },
+          },
+          legend: {
+            show: false,
+            position: "top",
+          },
+          dataLabels: {
+            enabled: false,
+            style: {
+              colors: ["black"],
+            },
+          },
+        };
+        this.chartOptions = {
+          chart: {
+            stacked: false,
+          },
+          colors: this.allcolors,
+          grid: {
+            show: true,
+          },
+          plotOptions: {
+            bar: {
+              horizontal: true,
+              distributed: true,
+            },
+          },
+          fill: {
+            type: "solid",
+            opacity: 1,
+          },
+          title: {
+            text: "Raw cell count by brain region for mScarlet",
+            align: "centre",
+            style: {
+              fontSize: "14px",
+              fontWeight: "bold",
+              color: "#263238",
+            },
+          },
+          xaxis: { categories: this.categories },
+          yaxis: {
+            tickAmount: 5,
+            max: this.slidervalue,
+            labels: { maxWidth: 350, offsetX: -10 },
+          },
+          legend: {
+            show: false,
+            position: "top",
+          },
+          textAnchor: "top",
+          dataLabels: {
             distributed: true,
+            enabled: false,
+            style: {
+              colors: ["black"],
+              fontWeight: "normal",
+              fontSize: "10px",
+            },
           },
-        },
-        fill: {
-          type: "solid",
-          opacity: 1,
-        },
-        title: {
-          text: "Raw cell count by brain region",
-          align: "centre",
-          style: {
-            fontSize: "14px",
-            fontWeight: "bold",
-            color: "#263238",
+        };
+      }
+      else {
+        this.chartOptions2 = {
+          chart: {
+            stacked: this.stackedState,
           },
-        },
-        xaxis: { categories: this.categories },
-        yaxis: {
-          tickAmount: 5,
-          max: this.slidervalue,
-          labels: { maxWidth: 350, offsetX: -10 },
-        },
-        legend: {
-          show: false,
-          position: "top",
-        },
-        textAnchor: "top",
-        dataLabels: {
-          distributed: true,
-          enabled: false,
-          style: {
-            colors: ["black"],
-            fontWeight: "normal",
-            fontSize: "10px",
+          tooltip: {
+            intersect: true,
+            shared: false,
+            onDatasetHover: {
+              highlightDataSeries: true,
+            },
           },
-        },
-      };
+          plotOptions: {
+            bar: {
+              horizontal: true,
+              distributed: true,
+            },
+          },
+          colors: this.colors,
+          grid: {
+            show: true,
+            borderColor: "#90A4AE",
+            strokeDashArray: 0,
+            position: "back",
+            xaxis: {
+              lines: {
+                show: false,
+              },
+            },
+            yaxis: {
+              lines: {
+                show: false,
+              },
+            },
+            row: {
+              colors: undefined,
+              opacity: 0.5,
+            },
+            column: {
+              colors: undefined,
+              opacity: 0.5,
+            },
+            padding: {
+              top: 0,
+              right: 0,
+              bottom: 0,
+              left: 0,
+            },
+          },
+
+          fill: {
+            type: "solid",
+            //type: "pattern",
+            opacity: 1,
+          },
+          title: {
+            text: "Raw cell count by category",
+            align: "center",
+            offsetY: 10,
+            style: {
+              fontSize: "14px",
+              fontWeight: "bold",
+              color: "#263238",
+            },
+          },
+          xaxis: { categories: this.mainregions,
+          tickPlacement: 'on' },
+          yaxis: {
+            tickAmount: 5,
+            max: this.slidervalue,
+            labels: { maxWidth: 270, style: { fontSize: "16px" } },
+          },
+          legend: {
+            show: false,
+            position: "top",
+          },
+          dataLabels: {
+            enabled: false,
+            style: {
+              colors: ["black"],
+            },
+          },
+        };
+        this.chartOptions = {
+          chart: {
+            stacked: false,
+          },
+          colors: this.allcolors,
+          grid: {
+            show: true,
+          },
+          plotOptions: {
+            bar: {
+              horizontal: true,
+              distributed: true,
+            },
+          },
+          fill: {
+            type: "solid",
+            opacity: 1,
+          },
+          title: {
+            text: "Raw cell count by brain region",
+            align: "centre",
+            style: {
+              fontSize: "14px",
+              fontWeight: "bold",
+              color: "#263238",
+            },
+          },
+          xaxis: { categories: this.categories },
+          yaxis: {
+            tickAmount: 5,
+            max: this.slidervalue,
+            labels: { maxWidth: 350, offsetX: -10 },
+          },
+          legend: {
+            show: false,
+            position: "top",
+          },
+          textAnchor: "top",
+          dataLabels: {
+            distributed: true,
+            enabled: false,
+            style: {
+              colors: ["black"],
+              fontWeight: "normal",
+              fontSize: "10px",
+            },
+          },
+        };
+      }
       this.categoryTotal = [
         {
           name: "CategoryTotal",
@@ -661,11 +795,12 @@ export default {
         return this.categoryTotal;
       }
     },
-    plotNormalized(){
+    plotNormalized() {
       this.showNormalized= true;
       this.showNormalizedButton= false;
       $("html, body").animate({ scrollTop: $(document).height() }, "slow");
-      this.normchartOptions = {
+      if (this.category=='cervical') {
+        this.normchartOptions = {
           chart: {
             stacked: false,
           },
@@ -682,7 +817,101 @@ export default {
             opacity: 1,
           },
           title: {
-            text: "Norm Cell count by category",
+            text: "Norm cell cout by category for mGreenLantern",
+            align: "center",
+            offsetY: 10,
+            style: {
+              fontSize: "14px",
+              fontWeight: "bold",
+              color: "#263238",
+            },
+          },
+          xaxis: { categories: this.mainregions},
+          yaxis: {
+            tickAmount: 5,
+            //max: this.maxval,
+            labels: { maxWidth: 270, style: { fontSize: "16px" } },
+          },
+          legend: {
+            show: false,
+            position: "top",
+          },
+          dataLabels: {
+            enabled: false,
+          },
+        };
+        this.normSeries = [
+          {
+            name: "normCategoryCount",
+            data: this.normalizedCategory,
+          },
+        ]
+        this.normRegionChartOptions = {
+          chart: {
+            stacked: false,
+          },
+          colors: this.allcolors,
+          grid: {
+            show: true,
+          },
+          plotOptions: {
+            bar: {
+              horizontal: true,
+              distributed: true,
+            },
+          },
+          fill: {
+            type: "solid",
+            opacity: 1,
+          },
+          title: {
+            text: "Normalized cell count by brain region for mGreenLantern",
+            align: "centre",
+            style: {
+              fontSize: "14px",
+              fontWeight: "bold",
+              color: "#263238",
+            },
+          },
+          xaxis: { categories: this.categories },
+          yaxis: {
+            tickAmount: 5,
+            labels: { maxWidth: 350, offsetX: -10 },
+          },
+          textAnchor: "top",
+          dataLabels: {
+            enabled: false,
+          },
+          legend: {
+            show: false,
+          }
+        };
+        this.normRegionSeries = [
+          {
+            name: "normRegionCount",
+            data: this.normalizedRegionCounts,
+          },
+        ]
+      }
+      else {
+        this.normchartOptions = {
+          chart: {
+            stacked: false,
+          },
+          plotOptions: {
+            bar: {
+              horizontal: true,
+              distributed: true,
+            },
+          },
+          colors: this.colors,
+          fill: {
+            type: "solid",
+            //type: "pattern",
+            opacity: 1,
+          },
+          title: {
+            text: "Norm cell count by category",
             align: "center",
             offsetY: 10,
             style: {
@@ -757,6 +986,7 @@ export default {
             data: this.normalizedRegionCounts,
           },
         ]
+      }
     }
   },
   created() {
