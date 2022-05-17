@@ -68,6 +68,18 @@ rsync -rv dist/ blackmoreserver:/var/www/3dmousebrain.com
 
 This will copy files in `dist/` directory into `3dmousebrain.com/`. A `dist/` directory should not appear in `3dmousebrain.com/`. 
 
+### SSH Alias
+
+```
+Host blackmoreserver
+    Hostname 3.18.40.128
+    User ubuntu
+    Port 22
+    IdentityFile /root/keypairs/brainrender.pem
+```
+
+Can also point `IdentityFile` to another location e.g. `/mnt/d/3dmousebrain/keys/brainrender.pem`.
+
 ### Run your tests
 
 JSC: I have not tried this.
