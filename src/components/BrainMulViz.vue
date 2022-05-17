@@ -530,7 +530,7 @@ export default {
             opacity: 1,
           },
           title: {
-            text: "Raw cell count by category for mScarlet",
+            text: "Raw cell counts by category for mScarlet",
             align: "center",
             offsetY: 10,
             style: {
@@ -576,7 +576,7 @@ export default {
             opacity: 1,
           },
           title: {
-            text: "Raw cell count by brain region for mScarlet",
+            text: "Raw cell counts by brain region for mScarlet",
             align: "centre",
             style: {
               fontSize: "14px",
@@ -662,7 +662,7 @@ export default {
             opacity: 1,
           },
           title: {
-            text: "Raw cell count by category",
+            text: "Raw cell counts by category",
             align: "center",
             offsetY: 10,
             style: {
@@ -708,7 +708,7 @@ export default {
             opacity: 1,
           },
           title: {
-            text: "Raw cell count by brain region",
+            text: "Raw cell counts by brain region",
             align: "centre",
             style: {
               fontSize: "14px",
@@ -911,7 +911,7 @@ export default {
             opacity: 1,
           },
           title: {
-            text: "Norm cell count by category",
+            text: "Normalized cell counts by category",
             align: "center",
             offsetY: 10,
             style: {
@@ -959,7 +959,7 @@ export default {
             opacity: 1,
           },
           title: {
-            text: "Normalized cell count by brain region",
+            text: "Normalized cell counts by brain region",
             align: "centre",
             style: {
               fontSize: "14px",
