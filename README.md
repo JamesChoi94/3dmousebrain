@@ -53,6 +53,21 @@ Run this to compile files for production. Files are compiled into `dist` directo
 npm run build
 ```
 
+## Deploying to AWS
+
+Dry-run `rsync` before you actually push changes:
+
+```
+rsync -nrv dist/ ubuntu@ip-172-31-28-81:/var/www/3dmousebrain.com
+```
+
+The real deal:
+```
+rsync -nrv dist/ ubuntu@ip-172-31-28-81:/var/www/3dmousebrain.com
+```
+
+This will copy files in `dist/` directory into `3dmousebrain.com/`. A `dist/` directory should not appear in `3dmousebrain.com/`. 
+
 ### Run your tests
 
 JSC: I have not tried this.

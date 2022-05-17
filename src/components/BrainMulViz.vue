@@ -198,7 +198,7 @@
             variant="primary"
             :disabled="id=='180' || id=='182'"
           >
-            Show normalized values 
+            Show mGreenLantern values
           </b-button>
         </b-col>
       </b-row>
