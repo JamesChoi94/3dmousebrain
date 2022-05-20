@@ -8,7 +8,7 @@
       </b-row>
       <hr>
       <b-row>
-        <b-col cols="4" v-for="cat in categoryObj" :key="cat.link">
+        <b-col sm="4" xs="12" v-for="cat in categoryObj" :key="cat.link">
           <b-card
             :title=cat.name
             :img-src="'../injectionimages/'+cat.link+'.png'"
@@ -59,8 +59,8 @@ export default {
           'text': 'AAV2-Retro-H2B-mGL was injected to segment T10 of the spinal cord'
         },
         {
-        'name': 'Lumbar/Cervical Injection',
-        'link': 'cervical',
+        'name': 'Cervical/Lumbar Injection',
+        'link': 'cervicallumbar',
         'text': 'AAV-Retro-mScarlet and AAV2-Retro-H2B-mGL were injected to segments C4 and L1 of the spinal cord, respectively'
         },
         {

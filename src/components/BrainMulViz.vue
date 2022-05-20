@@ -275,7 +275,7 @@ export default {
         },
       ],
       filter: null,
-      normBrains: ['174','176','177','179','190','191'],
+      normBrains: ['174','176'],
       normSeries: [],
       normchartOptions: {},
       normRegionSeries: [],
@@ -285,7 +285,7 @@ export default {
   computed: {
     calcSliderMarks: function(){
       //let finalpoint = this.slidervalue
-      if (this.category=='cervical') {
+      if (this.category=='cervicallumbar') {
         let marks = [500, 1000, 3000, 5000, 16000];
         return marks;
       }
@@ -295,7 +295,7 @@ export default {
       }
     },
     calcMax: function(){
-      if (this.category=='cervical') {
+      if (this.category=='cervicallumbar') {
         return 16000;
       }
       else {
@@ -303,7 +303,7 @@ export default {
       }
     },
     calcBreadCrumbVal(){
-      if (this.category=='cervical') {
+      if (this.category=='cervicallumbar') {
         return 'cervical-lumbar'
       }
       else if (this.category=='lowlumbar') {
@@ -471,10 +471,10 @@ export default {
     showChart() {
       $("html, body").animate({ scrollTop: $(document).height() }, "slow");
       this.flag = true;
-      if (this.category=='injured' || this.category=='cervical') {
+      if (this.category=='injured' || this.category=='cervicallumbar') {
         this.showNormalizedButton = true;
       }
-      if (this.category=='cervical') {
+      if (this.category=='cervicallumbar') {
         this.chartOptions2 = {
           chart: {
             stacked: this.stackedState,
@@ -799,7 +799,7 @@ export default {
       this.showNormalized= true;
       this.showNormalizedButton= false;
       $("html, body").animate({ scrollTop: $(document).height() }, "slow");
-      if (this.category=='cervical') {
+      if (this.category=='cervicallumbar') {
         this.normchartOptions = {
           chart: {
             stacked: false,
@@ -888,7 +888,7 @@ export default {
         };
         this.normRegionSeries = [
           {
-            name: "normRegionCount",
+            name: "RegionTotal",
             data: this.normalizedRegionCounts,
           },
         ]
@@ -982,7 +982,7 @@ export default {
         };
         this.normRegionSeries = [
           {
-            name: "normRegionCount",
+            name: "RegionTotal",
             data: this.normalizedRegionCounts,
           },
         ]

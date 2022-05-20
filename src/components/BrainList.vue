@@ -61,7 +61,7 @@ export default {
     return {
       activeCard: null,
       brainObj: {
-        cervical: ["174", "176"],
+        cervicallumbar: ["174", "176"],
         lumbar: ["167", "168"],
         lowlumbar: ["136","138"],
         injured: [ "190", "191", "177", "179", "180","182", "148", "149",],

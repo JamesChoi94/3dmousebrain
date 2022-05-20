@@ -20,7 +20,7 @@
           links: [
               {
                   name: 'Home',
-                  route: 'cervical',
+                  route: 'cervicallumbar',
                   state: false
               },
               {
