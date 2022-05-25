@@ -1,13 +1,26 @@
 <template>
-<div>
-  <b-navbar type="dark" variant="primary" class="navitems">
-    <b-navbar-nav>
-      <b-nav-item href="/">Home</b-nav-item>
-      <b-nav-item :to="{name: 'selecttype'}">Brains</b-nav-item>
-      <b-nav-item :to="{name: 'methods'}">Methods</b-nav-item>
-      <b-nav-item :to="{name: 'software'}">Software</b-nav-item>
-      <b-nav-item :to="{name: 'contact'}">Contact</b-nav-item>
-    </b-navbar-nav>
+<div class="container-fluid">
+  <b-navbar 
+  type="dark" 
+  variant="primary"
+  toggleable="md"
+  >
+    <b-navbar-brand href="/" >
+      <img src="../3dmousebrain-logo.png" width="40" height="30" alt="Logo" class="d-inline-block align-center">
+      3Dmousebrain
+    </b-navbar-brand>
+
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-nav>
+        <b-nav-item href="/">Home</b-nav-item>
+        <b-nav-item :to="{name: 'selecttype'}">Brains</b-nav-item>
+        <b-nav-item :to="{name: 'methods'}">Methods</b-nav-item>
+        <b-nav-item :to="{name: 'software'}">Software</b-nav-item>
+        <b-nav-item :to="{name: 'contact'}">Contact</b-nav-item>
+      </b-navbar-nav>
+    </b-collapse>
   </b-navbar>
 </div>
 </template>

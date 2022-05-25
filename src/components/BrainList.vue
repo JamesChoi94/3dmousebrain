@@ -14,42 +14,46 @@
         Treatments
       </b-breadcrumb-item>
     </b-breadcrumb>
-    <b-container>
-      <b-row> </b-row>
-      <b-row>
-        <b-col
-          cols="6"
-          v-for="(brain, index) in brainObj[$route.name]"
-          :key="index"
-        >
-          <b-card v-b-popover.hover="hoveredText(brain)"
-            @mouseover="activeCard=index"
-            @mouseout="activeCard=null"
-            :border-variant="activeCard==index ? 'primary' : 'dark' "
-            :header="($route.name=='injured') ? textContent(brain) : ''"
-            header-text-variant="dark"
-            :title="'Animal ID: ' + brain" 
-            :img-src="'../injectionimages/'+brain+'.png'"
-            img-alt="Image"
-            img-top
-            :img-height="300"
-            tag="article"
-            style="max-width: 70%"
-            :class="activeCard==index ? ['highlightcard','mb-2'] : 'mb-2'"
+    <div class="d-flex justify-content-center">
+      <b-container fluid>
+        <b-row class="justify-content-center">
+          <b-col
+            class="d-flex justify-content-center"
+            lg="6" md="6" sm="6" cols="auto" align-h="center"
+            v-for="(brain, index) in brainObj[$route.name]"
+            :key="index"
           >
-            <b-button
-              :to="{
-                name: $route.name + 'brain',
-                params: { id: brain, category: $route.name },
-              }"
-              variant="primary"
+            <b-card 
+              v-b-popover.hover="hoveredText(brain)"
+              @mouseover="activeCard=index"
+              @mouseout="activeCard=null"
+              :border-variant="activeCard==index ? 'primary' : 'dark' "
+              :header="($route.name=='injured') ? textContent(brain) : ''"
+              header-text-variant="dark"
+              :title="'Animal ID: ' + brain" 
+              :img-src="'../injectionimages/'+brain+'.png'"
+              img-alt="Image"
+              img-top
+              :img-height="300"
+              tag="article"
+              align="center" 
+              style="width: 100%; max-width: 320px; justify-content: center;"
+              :class="activeCard==index ? ['highlightcard','mb-2'] : 'mb-2'"
             >
-              <b>Visualize</b>
-            </b-button>
-          </b-card>
-        </b-col>
-      </b-row>
-    </b-container>
+              <b-button
+                :to="{
+                  name: $route.name + 'brain',
+                  params: { id: brain, category: $route.name },
+                }"
+                variant="primary"
+              >
+                <b>Visualize</b>
+              </b-button>
+            </b-card>
+          </b-col>
+        </b-row>
+      </b-container>
+    </div>
   </div>
 </template>
 
@@ -74,30 +78,44 @@ export default {
       console.log("hi")
     },
     hoveredText(id){
-     if (id=='148' || id == '149') {
-       return "AAV2-Retro-H2B-mGL injected to T10 four weeks after T11/12 injury"
-     } 
-     else {
-       return "AAV2-Retro-H2B-mGL injected to L1 seven weeks after T11/12 injury"
-     }
-    },
-    // if colors required for the border
-    borderColor(id){
-      if (id=='182' || id=='180') {
-        return 'danger'
+      // Cervical-Lumbar
+      if (id=='174'||id=='176') {
+        return "AAV-Retro-mScarlet and AAV2-Retro-H2B-mGL were injected to segments C4 and L1 of the spinal cord, respectively."
+      } 
+      // Upper Lumbar
+      else if (id=='167'||id=='168') {
+        return "AAV2-Retro-H2B-mGL was injected to segment L1 of the spinal cord."
+      } 
+      // Lower Lumbar
+      else if (id=='136'||id=='138') {
+        return "AAV2-Retro-H2B-mGL was injected to segment L3/4 of the spinal cord."
       }
-      else if (id=='148' || id == '149') {
-        return 'warning'
+      // Thoracic
+      else if (id=='140'||id=='145') {
+        return "AAV2-Retro-H2B-mGL was injected to segment T10 of the spinal cord."
       }
-      else if (id=='190' || id == '191') {
-        return 'info'
-      }
+      // Injured
       else {
-        return 'primary'
+        return "AAV2-Retro-H2B-mGL was injected rostrally or caudally after mild, moderate or severe spinal injury."
       }
-      //:header-bg-variant="($route.name=='injured') ? borderColor(brain) : ''"
-    }
-    ,
+    },
+    // // if colors required for the border
+    // borderColor(id){
+    //   if (id=='182' || id=='180') {
+    //     return 'danger'
+    //   }
+    //   else if (id=='148' || id == '149') {
+    //     return 'warning'
+    //   }
+    //   else if (id=='190' || id == '191') {
+    //     return 'info'
+    //   }
+    //   else {
+    //     return 'primary'
+    //   }
+    //   //:header-bg-variant="($route.name=='injured') ? borderColor(brain) : ''"
+    // }
+    // ,
     textContent(id){
       if (id=='182' || id=='180') {
         return 'Severe Injury'

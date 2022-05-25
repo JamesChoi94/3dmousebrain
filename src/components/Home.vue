@@ -1,11 +1,29 @@
 <template>
   <div>
   <b-container>
-    <b-row class="container">
+    <b-row>
       <b-col>
         <h3>
-            Exploring Nuclei of Descending Input to the Spinal Cord
+        Exploring Nuclei of Descending Input to the Spinal Cord
         </h3>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col class="text-center">
+        <h5>
+        This project visualizes and quantifies supra spinal neurons with projections to the cervical, thoracic and lumbar segments.
+        </h5>
+        <b-button 
+          class="button" 
+          variant="primary" 
+          :to="{name: 'selecttype'}"
+        >
+          <b>Start Exploring</b>
+        </b-button>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col>
         <br>
         <b-carousel
             id="carousel-fade"
@@ -22,18 +40,9 @@
             >
           </b-carousel-slide>
         </b-carousel>
+        <br>
       </b-col>
     </b-row>
-    <br>
-    <b-row>
-      <h5>
-        This project visualizes and quantifies supra spinal neurons with projections to the cervical, thoracic and lumbar segments.
-      </h5>
-      <b-button class="butt" variant="primary" :to="{name: 'selecttype'}">
-        <b>Start Exploring</b>
-      </b-button>
-    </b-row>
-    <br>
   </b-container>
   </div>
 </template>
@@ -84,21 +93,23 @@ h3 {
   text-align: center;
 }
 h5 {
-  margin-left: 38px;
-  margin-top: -15px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
   text-align: center;
-  font-size: 19px;
+  font-size: 18px;
 }
-.butt {
+.button {
   margin: 0 auto;
-  display: block;
+  /* display: block; */
 }
 
 .carousel-item {
-  height: 750px !important;
+  width: 100% !important;
+  height: 100%;
 }
 .container {
-  margin-top: -20px;
+  margin-top: 0px;
 }
 /* .img {
     position: absolute;

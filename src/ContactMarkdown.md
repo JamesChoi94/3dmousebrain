@@ -19,7 +19,7 @@ email: ptsoulfa@med.miami.edu
 This work was supported by NIH/NINDS R01NS083983 (M.B and P.T.), the Bryon Riesch Paralysis Foundation (M.B.), The Miami Project to Cure Paralysis (P.T), and the Buoniconti Fund (P.T). We thank Troy Margrie, Adam Tyson, Luigi Petrucco and others at the Brainglobe Initiative.
 
 
-Link to full original manuscript here: https://www.biorxiv.org/content/10.1101/2021.06.10.447885v2.full.pdf
+Click [here](https://www.biorxiv.org/content/10.1101/2021.06.10.447885v2.full.pdf) to read full original manuscript on bioRxiv.
 
 
 Website designed and maintained by Vatsal Mehra and [James Choi](https://github.com/JamesChoi94).

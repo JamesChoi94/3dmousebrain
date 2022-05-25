@@ -9,7 +9,9 @@ For the registration of brain images to [Allen Reference Atlas](https://mouse.br
 ### Brainrender
 After registering data to the Allen Reference Atlas, we used [brainrender](https://docs.brainrender.info) to render images in 3D.
 
-For more details on adapting the captured serial 2D images from the light-sheet microscope into computational neuroanatomy using the BrainGlobe Initiative's tools, see the Materials and Methods section from the original manuscript. Original manuscript can be found here: https://www.biorxiv.org/content/10.1101/2021.06.10.447885v2.full.pdf  
+For more details on adapting the captured serial 2D images from the light-sheet microscope into computational neuroanatomy using the BrainGlobe Initiative's tools, see the Materials and Methods section from the original manuscript. 
+
+Click [here](https://www.biorxiv.org/content/10.1101/2021.06.10.447885v2.full.pdf) to read the original manuscript.
 
 
 Website is a single web app built using the VueJs from-end framework. The site itself is hosted on an AWS server. 

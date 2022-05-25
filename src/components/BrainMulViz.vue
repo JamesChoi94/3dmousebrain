@@ -1,5 +1,6 @@
 <template>
   <div class="multiviz">
+    <!-- Directory tree text aka breadcrumbs -->
     <b-breadcrumb>
       <b-breadcrumb-item href="/">
         <b-icon
@@ -21,41 +22,54 @@
       </b-breadcrumb-item>
       <b-breadcrumb-item active>{{ id }}</b-breadcrumb-item>
     </b-breadcrumb>
+
+    <!-- 3D interactive visual -->
     <b-container fluid>
       <b-row>
         <b-col>
           <div v-show="staticimage">
-            <b-img
-              thumbnail
+            <b-img 
+              thumbnail 
               width="700"
-              :src="'../static3d/' + id + '.png'"
+              height="350"
+              :src="'../static3d/' + id + '.png'" 
               alt="Image 1"
             >
             </b-img>
+
             <b-button
               class="bt"
               @click="staticimage = !staticimage"
               variant="primary"
-              >Load Interactive</b-button
             >
+              Load Interactive
+            </b-button>
           </div>
           <iframe
             v-if="!staticimage"
             id="jupyter"
-            width="1000"
-            height="500"
+            style="width:100%; height:350px;"
             :src="'../html/' + category + '/' + id + '/' + id + '.html'"
             frameborder="1"
-          ></iframe>
+          >
+          </iframe>
         </b-col>
       </b-row>
       <hr />
+
       <b-row class="myrow">
+
         <b-col cols="6" md="auto">
+
+          <!-- Horiontal 2D brain region annotations -->
           <b-input-group>
+
+            <!-- Scroll left button -->
             <v-button class="mybutton">
-              <v-icon @click="prevImage" large> mdi-chevron-left-box </v-icon>
+              <v-icon @click="prevImage" medium> mdi-chevron-left-box </v-icon>
             </v-button>
+
+            <!-- Image -->
             <b-img
               thumbnail
               v-if="filteredset[currentImage]"
@@ -64,13 +78,20 @@
               height="400px"
             >
             </b-img>
+
+            <!-- Image stack counter -->
             <span>{{ imageCounter() }}</span>
+
+            <!-- Scroll right button -->
             <v-button class="mybutton next">
-              <v-icon @click="nextImage(filteredset)" large>
+              <v-icon @click="nextImage(filteredset)" medium>
                 mdi-chevron-right-box
               </v-icon>
             </v-button>
+
           </b-input-group>
+
+          <!-- Sagittal 2D brain region annotations -->
           <b-input-group v-if="id == '176'">
             <v-button class="mybutton">
               <v-icon @click="prevSagImage" large>
@@ -93,7 +114,7 @@
           </b-input-group>
         </b-col>
         <b-col align-self="stretch">
-          <b-input-group size="lg">
+          <b-input-group size="md">
             <b-form-input
               v-model="filter"
               type="search"
