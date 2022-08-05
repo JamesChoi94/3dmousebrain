@@ -18,6 +18,7 @@
         <b-nav-item :to="{name: 'selecttype'}">Brains</b-nav-item>
         <b-nav-item :to="{name: 'methods'}">Methods</b-nav-item>
         <b-nav-item :to="{name: 'software'}">Software</b-nav-item>
+        <b-nav-item :to="{name: 'references'}">References</b-nav-item>
         <b-nav-item :to="{name: 'contact'}">Contact</b-nav-item>
       </b-navbar-nav>
     </b-collapse>

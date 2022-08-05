@@ -113,6 +113,7 @@
             </v-button>
           </b-input-group>
         </b-col>
+
         <b-col align-self="stretch">
           <b-input-group size="md">
             <b-form-input
@@ -133,9 +134,13 @@
               :items="brainkey"
               :fields="fields"
             >
-              <template #table-caption><b>Region Index Key</b> </template>
-              <template #cell(Region)="data">
-                <span id="tooltip-target-1">
+              <template #table-caption>
+                <b>
+                  Region Index Key
+                </b>
+              </template>
+              <!-- <template #cell(Region)="data"> -->
+                <!-- <span id="tooltip-target-1">
                   {{ data.item.Region }}
                 </span>
                 <b-tooltip
@@ -148,13 +153,13 @@
                     <ul>
                       <li v-for="(name, index) in data.item.Name" :key="index">
                         <a :href="data.item.Link[index]" target="_blank">
-                          {{ name }}</a
-                        >
+                          {{ name }}
+                        </a>
                       </li>
                     </ul>
                   </div>
-                </b-tooltip>
-              </template>
+                </b-tooltip> -->
+              <!-- </template> -->
             </b-table>
           </b-input-group>
         </b-col>
